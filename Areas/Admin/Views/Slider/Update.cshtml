@@ -1,0 +1,30 @@
+﻿@using Core.Models
+@model Slider
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form asp-action="Update" method="post" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Name</label>
+                    <input type="text" asp-for="Name" class="form-control" id="exampleInputEmail1">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Price</label>
+                    <input type="text" asp-for="Price" class="form-control" id="exampleInputEmail1">
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+               
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">ImageFile</label>
+                    <input asp-for="ImageFile" class="form-control" id="exampleInputEmail1">
+                    <span asp-validation-for="ImageFile" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
